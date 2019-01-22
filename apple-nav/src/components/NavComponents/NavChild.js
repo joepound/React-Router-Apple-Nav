@@ -4,11 +4,9 @@ import PropTypes from "prop-types";
 import "./Nav.scss";
 
 const NavChild = props => {
-  const products = Array(5).fill(props.navCategoryData);
-
   return (
     <ul className="apple-nav__subcategory">
-      {products.map((product, i) => (
+      {props.products.map((product, i) => (
         <li className="apple-nav__subcategory__item">
           <img
             className="apple-nav__subcategory__item__icon"

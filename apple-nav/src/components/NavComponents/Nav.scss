@@ -30,6 +30,10 @@
         transition-duration: 250ms;
         transition-property: all;
       }
+
+      a {
+        @include remove-hyperlink-styling(nth($nav-wrapper-colors, 2));
+      }
     }
   }
 

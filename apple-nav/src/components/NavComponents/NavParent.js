@@ -8,18 +8,21 @@ const NavParent = props => {
   return (
     <ul className="apple-nav__categories">
       <li className="apple-nav__categories__item">
-        <img
-          className="apple-nav__categories__item--image"
-          src="images/nav/nav-logo.png"
-          alt=""
-        />
+        <NavLink to="/">
+          <img
+            className="apple-nav__categories__item--image"
+            src="images/nav/nav-logo.png"
+            alt=""
+          />
+        </NavLink>
       </li>
-      <li className="apple-nav__categories__item">Mac</li>
-      <li className="apple-nav__categories__item">iPad</li>
-      <li className="apple-nav__categories__item">iPhone</li>
-      <li className="apple-nav__categories__item">Watch</li>
-      <li className="apple-nav__categories__item">TV</li>
-      <li className="apple-nav__categories__item">Music</li>
+      {props.categories.map(category => (
+        <li className="apple-nav__categories__item">
+          <NavLink to={`/${category.toLowerCase()}`}>
+            {category}
+          </NavLink>
+        </li>
+      ))}
       <li className="apple-nav__categories__item">Support</li>
       <li className="apple-nav__categories__item">
         <img

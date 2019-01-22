@@ -10,10 +10,20 @@ import NavChildren from "./NavChild.js";
 import navCategoryData from "../../navCategoryData.js";
 
 const NavWrapper = props => {
+  const categories = navCategoryData;
+
   return (
     <nav className="apple-nav">
-      <NavParent />
-      <NavChildren navCategoryData={navCategoryData[0]} />
+      <NavParent categories={categories.map(category => category.categoryName)} />
+      <Route exact path="/" />
+      {categories.map(category => (
+        <Route
+          path={`/${category.categoryName.toLowerCase()}`}
+          render={props => (
+            <NavChildren {...props} products={category.products} />
+          )}
+        />
+      ))}
     </nav>
   );
 };
