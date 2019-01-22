@@ -1,0 +1,17 @@
+/* Color values */
+$black: #000000;
+$mine-shaft: #2C2C2C;
+$concrete: #F3F3F3;
+
+/* Font assignments */
+
+$body-font-family: "Calibri";
+$heading-font-family: "Roboto";
+
+/*  Color assignments */
+
+// Global assignments
+$default-font-color: $black;
+
+// Apple nav assignments
+$nav-wrapper-colors: ($mine-shaft, $concrete, null, null, null);
