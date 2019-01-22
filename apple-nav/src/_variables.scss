@@ -1,7 +1,9 @@
 /* Color values */
 $black: #000000;
-$mine-shaft: #2C2C2C;
-$concrete: #F3F3F3;
+$mine-shaft: #2c2c2c;
+$concrete: #f3f3f3;
+$wild-sand: #f6f6f6;
+$science-blue: #0070c9;
 
 /* Font assignments */
 
@@ -15,3 +17,5 @@ $default-font-color: $black;
 
 // Apple nav assignments
 $nav-wrapper-colors: ($mine-shaft, $concrete, null, null, null);
+$nav-children-colors: ($wild-sand, $black, null, null, null);
+$nav-children-hover-font-color: $science-blue;

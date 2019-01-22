@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 import "./Nav.scss";
@@ -10,6 +11,7 @@ const NavParent = props => {
         <img
           className="apple-nav__categories__item--image"
           src="images/nav/nav-logo.png"
+          alt=""
         />
       </li>
       <li className="apple-nav__categories__item">Mac</li>
@@ -23,12 +25,14 @@ const NavParent = props => {
         <img
           className="apple-nav__categories__item--image"
           src="images/nav/nav-search.png"
+          alt="Search"
         />
       </li>
       <li className="apple-nav__categories__item">
         <img
           className="apple-nav__categories__item--image"
           src="images/nav/nav-bag.png"
+          alt="Your Bag"
         />
       </li>
     </ul>

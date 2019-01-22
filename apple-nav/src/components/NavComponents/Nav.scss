@@ -4,12 +4,13 @@
 .apple-nav {
   @include set-colors($nav-wrapper-colors...);
 
-  padding: 15px 0;
+  padding-top: 12.5px;
 
   &__categories {
     @include make-flex(row, space-between, center);
 
     max-width: 980px;
+    padding-bottom: 12.5px;
     margin: 0 auto;
 
     &__item {
@@ -28,6 +29,30 @@
         filter: brightness(50%);
         transition-duration: 250ms;
         transition-property: all;
+      }
+    }
+  }
+
+  &__subcategory {
+    @include make-flex(row, center, center);
+    @include set-colors($nav-children-colors...);
+
+    margin: 0 auto;
+
+    &__item {
+      text-align: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 10px 0;
+      margin: 0 2.5%;
+
+      &:hover {
+        color: $nav-children-hover-font-color;
+      }
+
+      &__icon {
+        max-width: 50px;
+        margin-bottom: 7.5px;
       }
     }
   }
