@@ -1,0 +1,21 @@
+@import "../../variables";
+
+@keyframes apple-nav__subcategory--fadeIn {
+  from {
+    background-color: $white;
+  }
+  to {
+    background-color: nth($nav-child-colors, 1);
+  }
+}
+
+@keyframes apple-nav__subcategory__item--floatIn {
+  from {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

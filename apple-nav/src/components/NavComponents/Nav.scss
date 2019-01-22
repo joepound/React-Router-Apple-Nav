@@ -1,5 +1,6 @@
 @import "../../variables";
 @import "../../mixins";
+@import "_animations";
 
 .apple-nav {
   @include set-colors($nav-wrapper-colors...);
@@ -38,10 +39,11 @@
   }
 
   &__subcategory {
-    @include make-flex(row, center, center);
-    @include set-colors($nav-children-colors...);
+    @include make-flex(row, center, center, wrap);
+    @include set-colors($nav-child-colors...);
 
     margin: 0 auto;
+    animation: apple-nav__subcategory--fadeIn 1s forwards;
 
     &__item {
       text-align: center;
@@ -49,9 +51,10 @@
       cursor: pointer;
       padding: 10px 0;
       margin: 0 2.5%;
+      animation: apple-nav__subcategory__item--floatIn 1s;
 
       &:hover {
-        color: $nav-children-hover-font-color;
+        color: $nav-child-hover-font-color;
       }
 
       &__icon {
