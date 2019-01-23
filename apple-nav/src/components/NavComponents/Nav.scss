@@ -19,21 +19,30 @@
       font-weight: bold;
       cursor: pointer;
       padding: 0 10px;
-      transition-duration: 500ms;
-      transition-property: filter;
+
+      %hover-on-dark {
+        transition-duration: 500ms;
+        transition-property: filter;
+
+        &:hover {
+          filter: brightness(50%);
+          transition-duration: 250ms;
+          transition-property: all;
+        }
+      }
 
       &--image {
         max-width: 20px;
       }
 
-      &:hover {
-        filter: brightness(50%);
-        transition-duration: 250ms;
-        transition-property: all;
-      }
-
       a {
         @include remove-hyperlink-styling(nth($nav-wrapper-colors, 2));
+        @extend %hover-on-dark;
+      }
+
+      &--active{
+        @include remove-hyperlink-styling(nth($nav-wrapper-colors, 2));
+        filter: brightness(50%);
       }
     }
   }
