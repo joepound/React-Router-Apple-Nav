@@ -18,7 +18,10 @@ const NavParent = props => {
       </li>
       {props.categories.map(category => (
         <li className="apple-nav__categories__item">
-          <NavLink to={`/${category.toLowerCase()}`}>
+          <NavLink
+            to={`/${category.toLowerCase()}`}
+            activeClassName="apple-nav__categories__item--active"
+          >
             {category}
           </NavLink>
         </li>
