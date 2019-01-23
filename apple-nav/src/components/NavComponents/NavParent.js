@@ -26,20 +26,26 @@ const NavParent = props => {
           </NavLink>
         </li>
       ))}
-      <li className="apple-nav__categories__item">Support</li>
       <li className="apple-nav__categories__item">
-        <img
-          className="apple-nav__categories__item--image"
-          src="images/nav/nav-search.png"
-          alt="Search"
-        />
+        <a onClick={e => alert("COMING SOON")}>Support</a>
       </li>
       <li className="apple-nav__categories__item">
-        <img
-          className="apple-nav__categories__item--image"
-          src="images/nav/nav-bag.png"
-          alt="Your Bag"
-        />
+        <a onClick={e => alert("COMING SOON")}>
+          <img
+            className="apple-nav__categories__item--image"
+            src="images/nav/nav-search.png"
+            alt="Search"
+          />
+        </a>
+      </li>
+      <li className="apple-nav__categories__item">
+        <a onClick={e => alert("COMING SOON")}>
+          <img
+            className="apple-nav__categories__item--image"
+            src="images/nav/nav-bag.png"
+            alt="Your Bag"
+          />
+        </a>
       </li>
     </ul>
   );
